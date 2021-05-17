@@ -1,0 +1,251 @@
+:root {
+  --white: #ffffff;
+  --linen: #f9ebe0;
+  --slate: #413370;
+  --terra: #d77a61;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Cutive Mono", monospace;
+  margin: 0px;
+  background: var(--linen);
+  color: var(--slate);
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#content-wrapper {
+  width: 50%;
+  height: 80%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Heading */
+
+#header-wrapper {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#header {
+  font-size: 4.5vw;
+  font-weight: bold;
+  margin: 0px;
+  white-space: nowrap;
+}
+
+/* consider making this bigger than hey im julie, add little additional animations for key words */
+
+#subheader {
+  font-size: 1.3vw;
+  color: var(--slate);
+  font-family: "Cutive Mono", monospace;
+  letter-spacing: 0.15em; /* Adjust as needed */
+  border-right: 0.15em solid var(--terra); /* The typwriter cursor */
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0px auto; /* Gives that scrolling effect as the typing happens */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--terra);
+  }
+}
+
+/* Main content */
+
+#content-container {
+  width: 100%;
+  height: 70%;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Portrait */
+
+#portrait-wrapper {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid var(--slate);
+  box-shadow: 6px 6px var(--terra);
+}
+
+/* Navigation */
+
+#navigation-wrapper {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-button {
+  height: 17%;
+  width: 100%;
+  font-family: "Cutive Mono", monospace;
+  font-weight: bold;
+  font-size: 36px;
+  text-decoration: none;
+  border: 3px solid var(--slate);
+  border-radius: 3vw;
+  color: var(--slate);
+  background: var(--white);
+  box-shadow: 6px 6px var(--terra);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* potential idea: have little popup when hover */
+
+.navigation-button:hover {
+  color: var(--white);
+  background: var(--slate);
+}
+
+.navigation-button:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+/* Banner */
+
+#sf-banner {
+  width: 100%;
+  height: 15%;
+  position: relative;
+  z-index: 0;
+  display: flex;
+}
+
+#sf-banner svg {
+  transform: translateY(-60%);
+  background: none;
+  position: absolute;
+  z-index: 0;
+}
+
+/* #Clouds {
+  transform: translateX(20%);
+} */
+
+/* Footer */
+
+footer {
+  font-size: 16px;
+  height: 5%;
+}
+
+/* Styles for <719px */
+
+@media (max-width: 719px) {
+  #content-wrapper {
+    width: 60%;
+    justify-content: center;
+  }
+
+  /* Header */
+
+  #header-wrapper {
+    height: 20%;
+    justify-content: center;
+    margin: 24px 0px 0px 0px;
+  }
+
+  #header {
+    font-size: 6vw;
+  }
+
+  #subheader {
+    display: none;
+  }
+
+  /* Main content */
+
+  #content-container {
+    width: 125%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Portrait */
+  #portrait-wrapper {
+    width: 50%;
+    height: 40%;
+  }
+
+  #portrait {
+    border: 2px solid var(--slate);
+    box-shadow: 4px 4px var(--terra);
+    object-position: 0% 20%;
+  }
+
+  /* Navigation */
+
+  #navigation-wrapper {
+    width: 50%;
+    height: 55%;
+  }
+
+  .navigation-button {
+    height: 15%;
+    font-size: 24px;
+    border: 2px solid var(--slate);
+    box-shadow: 4px 4px var(--terra);
+  }
+
+  /* Banner */
+
+  #sf-banner svg {
+    transform: translateY(-40%);
+  }
+}

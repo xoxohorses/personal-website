@@ -1,0 +1,97 @@
+:root {
+  --magnolia: #ede6f2;
+  --skyblue: #8acdea;
+  --indigo: #0d3b66;
+  --brandy: #8c4843;
+  --sugar: #9e643c;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Dosis", sans-serif;
+  margin: 0px;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  background: var(--skyblue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#content-wrapper {
+  width: 70%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  border: 1px solid red;
+}
+
+/* About Julie header */
+
+#header-wrapper {
+  width: 480px;
+  margin: 0px;
+  color: var(--indigo);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+}
+
+#header {
+  width: 90%;
+  font-size: 72px;
+  font-family: "Abril Fatface", cursive;
+  margin: 0px 0px 24px 0px;
+}
+
+/* Identity label subheaders */
+
+#subheader-wrapper {
+  width: 60%;
+  font-size: 16px;
+  margin: 10px 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+
+#subheader-wrapper li {
+  list-style: none;
+}
+
+#subheader-wrapper a {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0px;
+}
+
+#subheader-label {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Identity descriptions */
+
+.description strong {
+  font-weight: 600;
+}
+
+#business-description {
+  width: 100%;
+  font-size: 20px;
+  margin: 10px 0px;
+}
