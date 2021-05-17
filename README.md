@@ -1,2 +1,7 @@
-# personalwebsite
-Julie's Personal Website
+# Julie's Personal Website
+
+- About
+- Resume
+- Github
+- Art
+- Blog
